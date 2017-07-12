@@ -1,7 +1,7 @@
 <template>
-  <div class="loading">
-      <slot>Loading...</slot>
-  </div>
+    <div class="loading">
+        <slot>Loading...</slot>
+    </div>
 </template>
 <style lang="stylus">
     .loading

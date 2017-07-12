@@ -25,18 +25,17 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="scss">
-  .app-content {
-    position: absolute;
-    top: 60px;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
+.app-content {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 </style>
 

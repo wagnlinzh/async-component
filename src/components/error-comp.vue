@@ -1,5 +1,5 @@
 <template>
   <div class="error">
-      error....
+    error....
   </div>
 </template>

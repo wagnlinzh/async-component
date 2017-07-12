@@ -1,7 +1,8 @@
 <template>
-    <div class="app-footer">
+    <div
+        class="app-footer">
         <slot>footer</slot>
-    </div>
+        </div>
 </template>
 <script>
 export default {
@@ -9,13 +10,13 @@ export default {
 }
 </script>
 <style lang="scss">
-    .app-footer{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 60px;
-        line-height: 60px;
-        border-top: 1px solid #eee;
-    }
+.app-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px solid #eee;
+}
 </style>
