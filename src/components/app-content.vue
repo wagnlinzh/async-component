@@ -1,10 +1,23 @@
 <template>
-  <div class="app-content" @click="getAsyncComponent">
-    <component :is="placeholder"></component>
+  <div class="app-content" >
+    <async-com></async-com>
   </div>
 </template>
 <script>
 import LoadComp from './loading-comp'
+import errCom from './error-comp'
+
+const asyncCom = () => ({
+  component: new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(import('./asyncCom.vue'))
+    }, 2000)
+  }),
+  loading: LoadComp,
+  error: errCom,
+  delay: 200,
+  timeout: 1000
+})
 
 export default {
   data () {
@@ -12,18 +25,10 @@ export default {
       placeholder: LoadComp
     }
   },
-  methods: {
-    getAsyncComponent () {
-      if (this.placeholder === LoadComp) {
-        if (!this.ImgContent) {
-          this.ImgContent = () => import('./img-content.vue')
-        }
-        this.ImgContent().then((theComponent) => {
-          this.placeholder = theComponent.default
-        })
-      }
-    }
+  components: {
+    asyncCom
   }
+
 }
 </script>
 
